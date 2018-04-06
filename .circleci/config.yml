@@ -9,3 +9,9 @@ jobs:
       - run: yarn install
       - run: yarn lint
       - run: yarn test
+
+      - run: yarn build
+
+      - deploy:
+          name: Deploy DEV
+          command: yarn deploy
