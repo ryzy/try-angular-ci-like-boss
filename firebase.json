@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": "dist/try-angular-ci-like-boss",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source" : "/index.html",
+        "headers" : [ {
+          "key" : "Cache-Control",
+          "value" : "max-age=60"
+        } ]
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
